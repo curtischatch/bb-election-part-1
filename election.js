@@ -11,7 +11,22 @@ document.addEventListener("DOMContentLoaded", function() {
       dataType: 'JSON',
     }).done(function(responseData) {
       console.log(responseData)
-      step1.append(responseData)
-    });
+      responseData.candidates.forEach(function(candidate) {
+        var listCandidates = document.createElement('li')
+        listCandidates.innerHTML = '<br>' + candidate.name + ':</br> ' + candidate.votes + ' votes';
+        election.append(listCandidates)
+      });
+    })
   })
+
+
+
 })
+
+//
+// }).done(function(responseData){
+//     responseData.candidates.forEach(function(candidate) {
+//       var li = document.createElement('li')
+//       li.innerHTML = '<b>' + candidate.name + ':</b> ' + candidate.votes + ' votes';
+//       ulElection.append(li)
+//     })
