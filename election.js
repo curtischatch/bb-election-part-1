@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log(responseData)
       responseData.candidates.forEach(function(candidate) {
         var listCandidates = document.createElement('li')
-        listCandidates.innerHTML = '<br>' + candidate.name + ':</br> ' + candidate.votes + ' votes';
+        listCandidates.innerHTML =
+        candidate.name + ': ' + candidate.votes + ' votes' + '<br>'+ '</br>';
         election.append(listCandidates)
       });
     })
