@@ -23,11 +23,3 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 })
-
-//
-// }).done(function(responseData){
-//     responseData.candidates.forEach(function(candidate) {
-//       var li = document.createElement('li')
-//       li.innerHTML = '<b>' + candidate.name + ':</b> ' + candidate.votes + ' votes';
-//       ulElection.append(li)
-//     })
